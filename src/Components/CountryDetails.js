@@ -13,7 +13,7 @@ class CountryDetails extends React.Component{
   }
 
   async loadData(){
-    const data = await fetch(`http://restcountries.eu/rest/v2/alpha/${this.props.match.params.country}`,{
+    const data = await fetch(`https://restcountries.eu/rest/v2/alpha/${this.props.match.params.country}`,{
       method:'get'
     });
     const d = await data.json();
@@ -49,7 +49,7 @@ class CountryDetails extends React.Component{
     );
 
     return (
-      <>
+      <div id='rootr'>
       {this.state.show?
       <CSSTransition in={this.state.show} classNames='display' timeout={400}> 
       <div>
@@ -58,7 +58,7 @@ class CountryDetails extends React.Component{
       </div>
       </CSSTransition>
       :<Loader type="TailSpin" color="#ffd700" height={80} width={80} style={{position:'absolute',top:'50vh',left:'50vw'}} />}
-      </>
+      </div>
     )
   }
 }

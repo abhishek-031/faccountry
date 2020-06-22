@@ -224,6 +224,10 @@ header a{
   color:#e1d276;
 }
 
+#rootr{
+  min-height:800px;
+}
+
 /* @media(max-width:1200px){
   .countryTile{
     width:27vw;

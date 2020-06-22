@@ -15,7 +15,7 @@ class Home extends React.Component{
   }
 
   async loadData(){
-    const data = await fetch('http://restcountries.eu/rest/v2/all?fields=name;alpha3Code;flag',{
+    const data = await fetch('https://restcountries.eu/rest/v2/all?fields=name;alpha3Code;flag',{
       method:'get'
     });
     const d = await data.json();
@@ -68,7 +68,7 @@ class Home extends React.Component{
       countries=<h3 style={{fontSize:28,color:"#ffd700"}}>No Countries with that Name, try something else!</h3>
     }
     return (
-      <>
+      <div id='rootr'>
       <input className='countryInput' name='country' placeholder='Search' value={this.state.search} type='text' onChange={e=>{this.onSearch(e)}} />
       <br />
       <CSSTransition in={this.state.show} timeout={700} classNames='display'>
@@ -78,7 +78,7 @@ class Home extends React.Component{
         </div>
         </div>
         </CSSTransition>
-      </>
+      </div>
     )
   }
 
