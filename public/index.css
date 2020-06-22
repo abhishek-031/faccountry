@@ -1,0 +1,295 @@
+*{
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+}
+
+body{
+  margin:0;
+  background:#022c43;
+}
+
+header{
+  height:80px;
+}
+
+header h1{
+  margin:0;
+  text-align: center;
+}
+
+header a{
+  display: inline-block;
+  line-height: 80px;
+  color:#ffd700;
+  font-family: sans-serif;
+  text-align: center;
+  font-size:32px;
+  padding: 0 20px;
+  text-shadow:8px 4px 6px #000;
+}
+
+.countryInput{
+  display: block;
+  margin:20px auto;
+  padding:10px 30px;
+  width:60%;
+  text-align: center;
+  font-size: 1.1em;
+  color:#115173;
+  font-weight: 750;
+  border-radius: 8px;
+  border:1px ridge #ffd700;
+  box-shadow: 2px 4px 6px #000;
+}
+
+
+.countryInput:focus{
+  outline:1px solid #ffd700;
+}
+
+.countryTiles{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.countryTile{
+  position: relative;
+  display: block;
+  width:250px;
+  border-radius: 6px;
+  margin:0 20px 30px 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.countryFlag{
+  height:140px;
+  width:250px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.countryTitle{
+  position: absolute;
+  top:110px;
+  background: #022c43ea;
+  color:#ffd700;
+  margin:0;
+  text-align:center;
+  line-height: 30px;
+  width:250px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.countryTile:hover .countryFlag{
+  opacity: 0.1;
+}
+
+.countryTile:hover .countryTitle{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  background-color: transparent;
+}
+
+.countryHeader{
+  margin:30px 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.countryHeader img{
+  margin:0 20px;
+  height:180px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+  object-fit: cover;
+}
+
+.countryHeader div{
+  margin-left:30px;
+  display: grid;
+  grid-row: auto;
+  color:#ffd700;
+  font-family: sans-serif;
+}
+
+.countryHeader h2{
+  font-size: 32px;
+  margin:0px;
+}
+
+.countryHeader h3{
+  margin:0;
+}
+
+.detailTiles{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:center;
+}
+
+.detailTile{
+  min-height:140px;
+  width:250px;
+  text-align: center;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  margin:6px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+  color:#022c43;
+}
+
+.detailTile h3{
+  margin:5px;
+  padding-right:10px;
+  padding-left:10px;
+}
+
+.lg:hover{
+  font-size: 1.2em;
+}
+
+.currencies{
+  width: 70%;
+}
+
+.currency{
+  height:250px;
+  font-size: 24px;
+  background:#e1d276;
+  text-align: center;
+  display:flex;
+  flex-direction: column;
+  width:260px;
+  margin:6px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+  color:#022c43;
+}
+
+.currency button{
+  padding:4px 20px;
+  width:fit-content;
+  margin:auto;
+  font-size: 18px;
+  border-radius: 4px;
+  border:none;
+  background: #022c43;
+  color:#e1d276;
+}
+
+.currency button:hover{
+  position: relative;
+  top:-2px;
+  box-shadow: 2px 4px 4px black;
+}
+
+.currency h3{
+  margin:2px 0;
+}
+
+.currency input{
+  padding:4px 10px;
+  width:80%;
+  margin:0 auto;
+  font-size:18px;
+}
+
+.currency select{
+  font-size: 16px;
+  width:80%;
+  margin:0 auto;
+}
+
+.currency input:focus, .current select:focus,.currency select:active{
+  outline:1px solid #ffd700;
+}
+
+.footerText{
+  text-align: center;
+  font-size: 18px;
+  color:#e1d276;
+  letter-spacing: 1px;
+  padding:10px;
+}
+
+.footerText a {
+  color:#e1d276;
+}
+
+/* @media(max-width:1200px){
+  .countryTile{
+    width:27vw;
+  }
+
+  .countryTitle{
+    width:27vw;
+  }
+
+  .countryFlag{
+    width:27vw;
+  }
+}
+
+@media(max-width:1100px){
+  .countryTile{
+    width:32vw;
+  }
+
+  .countryTitle{
+    width:32vw;
+  }
+
+  .countryFlag{
+    width:32vw;
+  }
+}
+
+@media(max-width:900px){
+  .countryTile{
+    width:45vw;
+  }
+
+  .countryTitle{
+    width:45vw;
+  }
+
+  .countryFlag{
+    width:45vw;
+  }
+
+} */
+
+.display-enter {
+  position: relative;
+  top:60vh;
+  opacity:0;
+}
+
+.display-enter-active {
+  position: relative;
+  top:0;
+  opacity:1;
+  transition:opacity 400ms, top 700ms;
+}
+
+.display-exit {
+  opacity: 1;
+}
+
+.display-exit-active {
+  opacity: 0.1;
+}
+
+@media(max-width:600px){
+  .countryHeader{
+    justify-content: center;
+  }
+}
