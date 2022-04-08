@@ -10,11 +10,10 @@ export default class Border extends React.Component{
   }
 
   async loadData(){
-    let query=`https://restcountries.eu/rest/v2/alpha?codes=`;
+    let query=`https://restcountries.com/v2/alpha?codes=`;
     for(let i=0;i<this.props.borders.length;i++){
-      query+=(this.props.borders[i]+';');
+      query+=(this.props.borders[i]+',');
     }
-    query+='&fields=flag;name;alpha3Code;'
     const data = await fetch(query,{
       method:'get'
     });

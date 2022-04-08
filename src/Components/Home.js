@@ -15,7 +15,7 @@ class Home extends React.Component{
   }
 
   async loadData(){
-    const data = await fetch('https://restcountries.eu/rest/v2/all?fields=name;alpha3Code;flag',{
+    const data = await fetch('https://restcountries.com/v2/all',{
       method:'get'
     });
     const d = await data.json();

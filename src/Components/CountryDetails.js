@@ -13,7 +13,7 @@ class CountryDetails extends React.Component{
   }
 
   async loadData(){
-    const data = await fetch(`https://restcountries.eu/rest/v2/alpha/${this.props.match.params.country}`,{
+    const data = await fetch(`https://restcountries.com/v2/alpha/${this.props.match.params.country}`,{
       method:'get'
     });
     const d = await data.json();
